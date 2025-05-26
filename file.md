@@ -53,7 +53,7 @@ Subnet Mask (255.255.224.0)
 If your IP is 10.53.17.74 and subnet mask is 255.255.224.0, your range is:
 <pre>10.53.0.0/19</pre>
 
-## Kali Linux / Linux
+## Debian/Ubuntu Linux
 Open Terminal and run:
 <pre>ip a</pre>
 Find your IP under your network interface (likely eth0 or wlan0):
@@ -66,4 +66,51 @@ Find your IP under your network interface (likely eth0 or wlan0):
        valid_lft forever preferred_lft forever</pre>
 The /24 is your CIDR range, so the network is:
 <pre>192.168.159.139/24</pre>
+
+# Run: nmap -sS 192.168.1.0/24 to perform TCP SYN scan.
+
+## Windows 
+nmap -sS -T4 10.53.0.0/19
+<pre>Starting Nmap 7.95 ( https://nmap.org ) at 2025-05-26 15:36 India Standard Time
+Nmap scan report for 10.53.17.74
+Host is up (0.00015s latency).
+Not shown: 990 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+902/tcp  open  iss-realsecure
+912/tcp  open  apex-mesh
+2869/tcp open  icslap
+4343/tcp open  unicall
+4449/tcp open  privatewire
+8000/tcp open  http-alt
+8089/tcp open  unknown
+
+Nmap done: 256 IP addresses (1 host up) scanned in 16.85 seconds</pre>
+
+## Debian/Ubuntu Linux
+
+nmap -sS 192.168.159.139/24
+<pre>Starting Nmap 7.95 ( https://nmap.org ) at 2025-05-26 06:47 EDT
+Nmap scan report for 192.168.159.2
+Host is up (0.00061s latency).
+Not shown: 999 closed tcp ports (reset)
+PORT   STATE SERVICE
+53/tcp open  domain
+MAC Address: 00:50:56:E2:9C:FB (VMware)
+
+Nmap scan report for 192.168.159.254
+Host is up (0.00064s latency).
+All 1000 scanned ports on 192.168.159.254 are in ignored states.
+Not shown: 1000 filtered tcp ports (no-response)
+MAC Address: 00:50:56:E4:B1:9A (VMware)
+
+Nmap scan report for 192.168.159.139
+Host is up (0.000021s latency).
+All 1000 scanned ports on 192.168.159.139 are in ignored states.
+Not shown: 1000 closed tcp ports (reset)
+
+Nmap done: 256 IP addresses (3 hosts up) scanned in 7.44 seconds</pre>
+
  
