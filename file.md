@@ -12,8 +12,8 @@
 4. Verify Installation:
    Open Command Prompt and type:
 
-"""cmd
-  nmap --version"""
+<pre>"""cmd
+  nmap --version"""</pre>
   You should see version info if the installation succeeded.
 
 
