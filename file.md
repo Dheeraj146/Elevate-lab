@@ -182,23 +182,26 @@ Application – HTTP, DNS, etc.
 # 7. Identify potential security risks from open ports.
 
 ## Security Risks to Common Ports
-Service	Port/Filter	Security Risks.
- DNS	udp.port == 53	
+DNS	udp.port == 53	
 <pre> DNS Spoofing/Poisoning (redirect to malicious sites)
 - Amplification Attacks used in DDoS
 - Cache poisoning vulnerabilities</pre>
-HTTP	http	- <pre>Unencrypted traffic (passwords & data in plain text)
+HTTP	http.port == 80	
+<pre>Unencrypted traffic (passwords & data in plain text)
 - Vulnerable to XSS, CSRF, and Injection attacks
 - Web server exploits</pre>
-
-HTTPS	tcp.port == 443	- <pre>Misconfigured or outdated SSL/TLS can expose data
+HTTPS	tcp.port == 443	
+<pre>Misconfigured or outdated SSL/TLS can expose data
 - Vulnerable to SSL stripping, Heartbleed, or TLS downgrade attacks</pre>
-FTP	tcp.port == 21	- <pre>Credentials sent in plain text
+FTP	tcp.port == 21	
+<pre>Credentials sent in plain text
 - Susceptible to brute-force, MITM, and bounce attacks
 - Anonymous access can lead to data leaks<pre>
-SSH	tcp.port == 22	- <pre>Target for brute-force and credential stuffing
+SSH	tcp.port == 22
+<pre>Target for brute-force and credential stuffing
 - Exploitable if outdated (e.g., CVE-2018-15473)
 - Misconfigured keys or weak passwords</pre>
-SMB	tcp.port == 445	- <pre>One of the most exploited ports (e.g., WannaCry, EternalBlue)
+SMB	tcp.port == 445
+<pre>One of the most exploited ports (e.g., WannaCry, EternalBlue)
 - Enables unauthorized file sharing
 - Can allow lateral movement in networks</pre>
