@@ -1,4 +1,4 @@
-# Install Nmap
+# 1. Install Nmap
 ## Windows
 
 1. Go to the official Nmap website: https://nmap.org/download.html.
@@ -30,3 +30,28 @@ Update Package Lists:
 3. Verify Installation:
 <pre>nmap --version</pre>
  You should see version info if the installation succeeded.
+
+ # 2. Find your local IP range (e.g., 192.168.1.0/24).
+
+## Windows
+1. Open Command Prompt:
+Press Win + R, type cmd, hit Enter.
+<pre>ipconfig</pre>
+2. Look for your active network adapter and note:
+IPv4 Address (e.g., 192.168.1.5)
+Subnet Mask (e.g., 255.255.255.0)
+
+3. Determine the IP range:
+If your IP is 192.168.1.5 and subnet mask is 255.255.255.0, your range is:
+<pre>192.168.1.0/24</pre>
+
+## Kali Linux / Linux
+Open Terminal and run:
+
+
+<pre>ip a</pre>
+Find your IP under your network interface (likely eth0 or wlan0):
+<pre>inet 192.168.1.5/24</pre>
+The /24 is your CIDR range, so the network is:
+<pre>192.168.1.0/24</pre>
+ 
