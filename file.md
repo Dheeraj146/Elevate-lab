@@ -37,9 +37,9 @@ Update Package Lists:
 1. Open Command Prompt:
 Press Win + R, type cmd, hit Enter.
 <pre>ipconfig</pre>
-2. Look for your active network adapter and note:
-IPv4 Address (e.g., 192.168.1.5)
-Subnet Mask (e.g., 255.255.255.0)
+2. Look for your active network adapter and note: In my case 
+IPv4 Address (10.53.17.74)
+Subnet Mask (255.255.224.0)
 <pre>Wireless LAN adapter Wi-Fi:
 
    Connection-specific DNS Suffix  . :
@@ -50,16 +50,20 @@ Subnet Mask (e.g., 255.255.255.0)
 </pre>
 
 4. Determine the IP range:
-If your IP is 192.168.1.5 and subnet mask is 255.255.255.0, your range is:
-<pre>192.168.1.0/24</pre>
+If your IP is 10.53.17.74 and subnet mask is 255.255.224.0, your range is:
+<pre>10.53.0.0/19</pre>
 
 ## Kali Linux / Linux
 Open Terminal and run:
-
-
 <pre>ip a</pre>
 Find your IP under your network interface (likely eth0 or wlan0):
 <pre>inet 192.168.1.5/24</pre>
-The /24 is your CIDR range, so the network is:
-<pre>192.168.1.0/24</pre>
+<pre>eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+    link/ether 00:0c:29:25:f4:5e brd ff:ff:ff:ff:ff:ff
+    inet 192.168.159.139/24 brd 192.168.159.255 scope global dynamic noprefixroute eth0
+       valid_lft 1661sec preferred_lft 1661sec
+    inet6 fe80::f89d:f794:f4db:9c5e/64 scope link noprefixroute 
+       valid_lft forever preferred_lft forever</pre>
+The 192.168.159.139/24 is your CIDR range, so the network is:
+<pre>192.168.159.139/24</pre>
  
