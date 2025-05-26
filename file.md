@@ -148,7 +148,35 @@ Nmap scan report for 192.168.159.2
 Open Wireshark.
 
 Go to File > Open, then select your .pcap file.
+[Wireshark_pcap_file](w.pcapng).
 
-Or start a live capture by selecting a network interface and clicking Start Capturing Packets.
+ 2. Use display filters to zoom in on specific traffic.
+<pre>
+   Task	                   Filter Example
+-----------------------------------------------------
+Show only HTTP traffic	    http
+Show traffic to IP	       ip.addr == 192.168.1.100
+Show only TCP packets	    tcp
+Show specific port          tcp.port == 443
+Show SYN packets	          tcp.flags.syn == 1 and tcp.flags.ack == 0
+</pre>
 
+3. Follow a TCP Stream
+    To analyze an entire TCP conversation (e.g., HTTP request/response):
 
+Right-click any packet in the stream.
+
+Select "Follow" > "TCP Stream".
+
+Wireshark will extract and display the full conversation.
+
+4. Inspect Protocol Details
+Click a packet, and expand sections like:
+
+Ethernet – MAC addresses
+
+IP – Source and destination IPs
+
+TCP/UDP – Ports, flags, sequence numbers
+
+Application – HTTP, DNS, etc.
