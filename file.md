@@ -67,13 +67,13 @@ Find your IP under your network interface (likely eth0 or wlan0):
 The /24 is your CIDR range, so the network is:
 <pre>192.168.159.139/24</pre>
 
-# Run: nmap -sS 192.168.1.0/24 to perform TCP SYN scan.
+# 3. Run: nmap -sS 192.168.1.0/24 to perform TCP SYN scan.
 
 ## Windows 
 nmap -sS -T4 10.53.0.0/19
-<pre>Starting Nmap 7.95 ( https://nmap.org ) at 2025-05-26 15:36 India Standard Time
+<pre>Starting Nmap 7.95 ( https://nmap.org ) at 2025-05-26 16:19 India Standard Time
 Nmap scan report for 10.53.17.74
-Host is up (0.00015s latency).
+Host is up (0.0010s latency).
 Not shown: 990 closed tcp ports (reset)
 PORT     STATE SERVICE
 135/tcp  open  msrpc
@@ -87,30 +87,61 @@ PORT     STATE SERVICE
 8000/tcp open  http-alt
 8089/tcp open  unknown
 
-Nmap done: 256 IP addresses (1 host up) scanned in 16.85 seconds</pre>
+Nmap done: 8192 IP addresses (1 host up) scanned in 507.97 seconds
+
 
 ## Debian/Ubuntu Linux
 
-nmap -sS 192.168.159.139/24
-<pre>Starting Nmap 7.95 ( https://nmap.org ) at 2025-05-26 06:47 EDT
+nmap -sS -p1-65535 192.168.159.139/24
+<pre>
+Starting Nmap 7.95 ( https://nmap.org ) at 2025-05-26 06:55 EDT
 Nmap scan report for 192.168.159.2
-Host is up (0.00061s latency).
-Not shown: 999 closed tcp ports (reset)
+Host is up (0.00059s latency).
+Not shown: 65534 closed tcp ports (reset)
 PORT   STATE SERVICE
 53/tcp open  domain
 MAC Address: 00:50:56:E2:9C:FB (VMware)
 
 Nmap scan report for 192.168.159.254
-Host is up (0.00064s latency).
-All 1000 scanned ports on 192.168.159.254 are in ignored states.
-Not shown: 1000 filtered tcp ports (no-response)
+Host is up (0.00028s latency).
+All 65535 scanned ports on 192.168.159.254 are in ignored states.
+Not shown: 65535 filtered tcp ports (no-response)
 MAC Address: 00:50:56:E4:B1:9A (VMware)
 
 Nmap scan report for 192.168.159.139
-Host is up (0.000021s latency).
-All 1000 scanned ports on 192.168.159.139 are in ignored states.
-Not shown: 1000 closed tcp ports (reset)
+Host is up (0.000023s latency).
+All 65535 scanned ports on 192.168.159.139 are in ignored states.
+Not shown: 65535 closed tcp ports (reset)
 
-Nmap done: 256 IP addresses (3 hosts up) scanned in 7.44 seconds</pre>
+Nmap done: 256 IP addresses (3 hosts up) scanned in 81.77 seconds
+
+</pre>
+
+#  4.Note down IP addresses and open ports found.
+
+## Windows
+Only one host scanned.
+Nmap scan report for 10.53.17.74
+<pre>Host is up (0.0010s latency).
+Not shown: 990 closed tcp ports (reset)
+PORT     STATE SERVICE
+135/tcp  open  msrpc
+139/tcp  open  netbios-ssn
+445/tcp  open  microsoft-ds
+902/tcp  open  iss-realsecure
+912/tcp  open  apex-mesh
+2869/tcp open  icslap
+4343/tcp open  unicall
+4449/tcp open  privatewire
+8000/tcp open  http-alt
+8089/tcp open  unknown</pre>
+
+## Debian/Ubuntu Linux
+Nmap scan report for 192.168.159.2
+<pre>PORT   STATE SERVICE
+53/tcp open  domain</pre>
+
+
+# 5. Optionaly analyze packet capture with Wireshark.
 
  
