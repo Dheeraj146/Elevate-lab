@@ -196,7 +196,7 @@ HTTPS	tcp.port == 443
 FTP	tcp.port == 21	
 <pre>Credentials sent in plain text
 - Susceptible to brute-force, MITM, and bounce attacks
-- Anonymous access can lead to data leaks<pre>
+- Anonymous access can lead to data leaks</pre>
 SSH	tcp.port == 22
 <pre>Target for brute-force and credential stuffing
 - Exploitable if outdated (e.g., CVE-2018-15473)
