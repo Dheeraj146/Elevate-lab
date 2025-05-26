@@ -60,7 +60,7 @@ Find your IP under your network interface (likely eth0 or wlan0):
 <pre>inet 192.168.1.5/24</pre>
 <pre>eth0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
     link/ether 00:0c:29:25:f4:5e brd ff:ff:ff:ff:ff:ff
-    inet **192.168.159.139/24** brd 192.168.159.255 scope global dynamic noprefixroute eth0
+    inet 192.168.159.139/24 brd 192.168.159.255 scope global dynamic noprefixroute eth0
        valid_lft 1661sec preferred_lft 1661sec
     inet6 fe80::f89d:f794:f4db:9c5e/64 scope link noprefixroute 
        valid_lft forever preferred_lft forever</pre>
