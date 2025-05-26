@@ -1,4 +1,4 @@
-# Nmap Network Scan
+# Scan Your Local Network for Open Ports
 
 This repository contains a basic local network scan using Nmap and analysis of results.
 
