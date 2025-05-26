@@ -18,3 +18,15 @@
 
 
 ## Debian/Ubuntu Linux
+
+Installing Nmap on Kali Linux
+Kali Linux usually comes with Nmap pre-installed. But if it's missing or you want to reinstall/update:
+
+1. Using apt (recommended)
+Update Package Lists:
+<pre>sudo apt update</pre>
+2. Install Nmap:
+<pre>sudo apt install nmap -y</pre>
+3. Verify Installation:
+<pre>nmap --version</pre>
+ You should see version info if the installation succeeded.
