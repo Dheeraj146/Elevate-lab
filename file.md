@@ -87,7 +87,7 @@ PORT     STATE SERVICE
 8000/tcp open  http-alt
 8089/tcp open  unknown
 
-Nmap done: 8192 IP addresses (1 host up) scanned in 507.97 seconds
+Nmap done: 8192 IP addresses (1 host up) scanned in 507.97 seconds</pre>
 
 
 ## Debian/Ubuntu Linux
@@ -144,4 +144,11 @@ Nmap scan report for 192.168.159.2
 
 # 5. Optionaly analyze packet capture with Wireshark.
 
- 
+  1. Open a Capture File (.pcap or .pcapng)
+Open Wireshark.
+
+Go to File > Open, then select your .pcap file.
+
+Or start a live capture by selecting a network interface and clicking Start Capturing Packets.
+
+
