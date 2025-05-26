@@ -40,8 +40,16 @@ Press Win + R, type cmd, hit Enter.
 2. Look for your active network adapter and note:
 IPv4 Address (e.g., 192.168.1.5)
 Subnet Mask (e.g., 255.255.255.0)
+<pre>Wireless LAN adapter Wi-Fi:
 
-3. Determine the IP range:
+   Connection-specific DNS Suffix  . :
+   Link-local IPv6 Address . . . . . : fe80::f0f7:f7c0:c8b7:2923%13
+   IPv4 Address. . . . . . . . . . . : 10.53.17.74
+   Subnet Mask . . . . . . . . . . . : 255.255.224.0
+   Default Gateway . . . . . . . . . : 10.53.0.1
+</pre>
+
+4. Determine the IP range:
 If your IP is 192.168.1.5 and subnet mask is 255.255.255.0, your range is:
 <pre>192.168.1.0/24</pre>
 
