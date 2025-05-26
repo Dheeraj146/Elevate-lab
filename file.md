@@ -14,9 +14,6 @@
 <pre>nmap --version</pre>
   You should see version info if the installation succeeded.
 
-
-
-
 ## Debian/Ubuntu Linux
 
 Installing Nmap on Kali Linux
@@ -152,42 +149,41 @@ Go to File > Open, then select your .pcap file.
 
  2. Use display filters to zoom in on specific traffic.
 <pre>
-   Task	                   Filter Example
------------------------------------------------------
-Show only HTTP traffic	    http
-Show traffic to IP	       ip.addr == 192.168.1.100
-Show only TCP packets	    tcp
-Show specific port          tcp.port == 443
-Show SYN packets	          tcp.flags.syn == 1 and tcp.flags.ack == 0
+| Task                   | Filter Example                              |
+| ---------------------- | ------------------------------------------- |
+| Show only HTTP traffic | `http`                                      |
+| Show traffic to IP     | `ip.addr == 192.168.1.100`                  |
+| Show only TCP packets  | `tcp`                                       |
+| Show specific port     | `tcp.port == 443`                           |
+| Show SYN packets       | `tcp.flags.syn == 1 and tcp.flags.ack == 0` |
 </pre>
 
  3. Follow a TCP Stream
-    To analyze an entire TCP conversation (e.g., HTTP request/response):
-
+To analyze an entire TCP conversation (e.g., HTTP request/response):
 Right-click any packet in the stream.
-
 Select "Follow" > "TCP Stream".
-
 Wireshark will extract and display the full conversation.
-
- 4. Inspect Protocol Details
+ 5. Inspect Protocol Details
 Click a packet, and expand sections like:
-
 Ethernet – MAC addresses
-
 IP – Source and destination IPs
-
 TCP/UDP – Ports, flags, sequence numbers
-
 Application – HTTP, DNS, etc.
-
-
-
-# 7.Identify potential security risks from open ports.
+# 6. Research common services running on those ports 
+<pre>| Service | Filter            |
+| ------- | ----------------- |
+| DNS     | `udp.port == 53`  |
+| HTTP    | `http`            |
+| HTTPS   | `tcp.port == 443` |
+| FTP     | `tcp.port == 21`  |
+| SSH     | `tcp.port == 22`  |
+| SMB     | `tcp.port == 445` |
+</pre>
+# 7. Identify potential security risks from open ports.
 
 ## Security Risks to Common Ports
-Service	Port/Filter	Security Risks
-DNS	udp.port == 53	
+Service	Port/Filter	Security Risks.
+ DNS	udp.port == 53	
 <pre> DNS Spoofing/Poisoning (redirect to malicious sites)
 - Amplification Attacks used in DDoS
 - Cache poisoning vulnerabilities</pre>
