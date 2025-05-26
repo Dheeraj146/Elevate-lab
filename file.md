@@ -11,9 +11,7 @@
     The installer typically installs it automatically. Accept the defaults unless you have specific needs (e.g., for Wireshark).
 4. Verify Installation:
    Open Command Prompt and type:
-
-<pre>"""cmd
-  nmap --version"""</pre>
+<pre>nmap --version</pre>
   You should see version info if the installation succeeded.
 
 
