@@ -1,7 +1,7 @@
 # Install Nmap
 ## Windows
 
-1. Go to the official Nmap website: https://nmap.org/download.html
+1. Go to the official Nmap website: https://nmap.org/download.html.
    Under “Microsoft Windows binaries,” click the installer link (e.g., nmap-<version>-setup.exe).
 2. Run the Installer:
    Double-click the downloaded .exe file.
