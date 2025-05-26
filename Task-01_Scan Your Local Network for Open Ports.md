@@ -139,7 +139,7 @@ Nmap scan report for 192.168.159.2
 53/tcp open  domain</pre>
 
 
-# 5. Optionaly analyze packet capture with Wireshark.
+# 5. Analyze packet capture with Wireshark.
 
 1. Open a Capture File (.pcap or .pcapng)
 Open Wireshark.
@@ -180,28 +180,26 @@ Application – HTTP, DNS, etc.
 | SMB     | `tcp.port == 445` |
 </pre>
 # 7. Identify potential security risks from open ports.
-
-## Security Risks to Common Ports
 DNS	udp.port == 53	
-<pre> DNS Spoofing/Poisoning (redirect to malicious sites)
+<pre>- DNS Spoofing/Poisoning (redirect to malicious sites)
 - Amplification Attacks used in DDoS
 - Cache poisoning vulnerabilities</pre>
 HTTP	http.port == 80	
-<pre>Unencrypted traffic (passwords & data in plain text)
+<pre>- Unencrypted traffic (passwords & data in plain text)
 - Vulnerable to XSS, CSRF, and Injection attacks
 - Web server exploits</pre>
 HTTPS	tcp.port == 443	
-<pre>Misconfigured or outdated SSL/TLS can expose data
+<pre>- Misconfigured or outdated SSL/TLS can expose data
 - Vulnerable to SSL stripping, Heartbleed, or TLS downgrade attacks</pre>
 FTP	tcp.port == 21	
-<pre>Credentials sent in plain text
+<pre>- Credentials sent in plain text
 - Susceptible to brute-force, MITM, and bounce attacks
 - Anonymous access can lead to data leaks</pre>
 SSH	tcp.port == 22
-<pre>Target for brute-force and credential stuffing
+<pre>- Target for brute-force and credential stuffing
 - Exploitable if outdated (e.g., CVE-2018-15473)
 - Misconfigured keys or weak passwords</pre>
 SMB	tcp.port == 445
-<pre>One of the most exploited ports (e.g., WannaCry, EternalBlue)
+<pre>- One of the most exploited ports (e.g., WannaCry, EternalBlue)
 - Enables unauthorized file sharing
 - Can allow lateral movement in networks</pre>
