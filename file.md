@@ -144,7 +144,7 @@ Nmap scan report for 192.168.159.2
 
 # 5. Optionaly analyze packet capture with Wireshark.
 
-  1. Open a Capture File (.pcap or .pcapng)
+1. Open a Capture File (.pcap or .pcapng)
 Open Wireshark.
 
 Go to File > Open, then select your .pcap file.
@@ -161,7 +161,7 @@ Show specific port          tcp.port == 443
 Show SYN packets	          tcp.flags.syn == 1 and tcp.flags.ack == 0
 </pre>
 
-3. Follow a TCP Stream
+ 3. Follow a TCP Stream
     To analyze an entire TCP conversation (e.g., HTTP request/response):
 
 Right-click any packet in the stream.
@@ -170,7 +170,7 @@ Select "Follow" > "TCP Stream".
 
 Wireshark will extract and display the full conversation.
 
-4. Inspect Protocol Details
+ 4. Inspect Protocol Details
 Click a packet, and expand sections like:
 
 Ethernet – MAC addresses
@@ -180,3 +180,29 @@ IP – Source and destination IPs
 TCP/UDP – Ports, flags, sequence numbers
 
 Application – HTTP, DNS, etc.
+
+
+
+# 7.Identify potential security risks from open ports.
+
+## Security Risks to Common Ports
+Service	Port/Filter	Security Risks
+DNS	udp.port == 53	
+<pre> DNS Spoofing/Poisoning (redirect to malicious sites)
+- Amplification Attacks used in DDoS
+- Cache poisoning vulnerabilities</pre>
+HTTP	http	- <pre>Unencrypted traffic (passwords & data in plain text)
+- Vulnerable to XSS, CSRF, and Injection attacks
+- Web server exploits</pre>
+
+HTTPS	tcp.port == 443	- <pre>Misconfigured or outdated SSL/TLS can expose data
+- Vulnerable to SSL stripping, Heartbleed, or TLS downgrade attacks</pre>
+FTP	tcp.port == 21	- <pre>Credentials sent in plain text
+- Susceptible to brute-force, MITM, and bounce attacks
+- Anonymous access can lead to data leaks<pre>
+SSH	tcp.port == 22	- <pre>Target for brute-force and credential stuffing
+- Exploitable if outdated (e.g., CVE-2018-15473)
+- Misconfigured keys or weak passwords</pre>
+SMB	tcp.port == 445	- <pre>One of the most exploited ports (e.g., WannaCry, EternalBlue)
+- Enables unauthorized file sharing
+- Can allow lateral movement in networks</pre>
