@@ -10,7 +10,8 @@
     Nmap requires Npcap to function.
     The installer typically installs it automatically. Accept the defaults unless you have specific needs (e.g., for Wireshark).
 4. Verify Installation:
-    Open Command Prompt and type:
+   Open Command Prompt and type:
+
 """cmd
   nmap --version"""
   You should see version info if the installation succeeded.
