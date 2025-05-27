@@ -22,8 +22,7 @@ Thank you for being a valued member of Netflix.
 Sincerely,
 Netflix Billing Department
 Netflix Inc.</pre>
-
-2. Examination of Sender's Email Address
+## 2. Examination of Sender's Email Address
    
 Claimed Sender: Netflix Support support@netflix-billing.com
 
@@ -34,17 +33,7 @@ This is a spoofed address meant to mimic legitimate communication.
 🔍 Red Flag: Domain looks official but is not registered to Netflix.
 
 
-3. Email Header Analysis
-Using an online email header analyzer:
-
-Return-Path and Received From domains did not match the claimed sender.
-
-IP address traced back to a non-Netflix server.
-
-SPF/DKIM authentication failed or was absent.
-
-🔍 Red Flag: Inconsistencies between sender and return-path; authentication missing.
-
+## 3. Email Header Analysis
 <pre>Return-Path: <support@netflix-billing.com>
 Received: from mail.netflix-billing.com (192.0.2.12)
   by smtp.example.com with ESMTP id ZKXH8M1G7;
@@ -59,7 +48,18 @@ MIME-Version: 1.0
 Content-Type: multipart/alternative;
  boundary="----=_Part_192_3048238927.1709466132904"</pre>
 
-4. Suspicious Links or Attachments
+Using an online email header analyzer:
+
+Return-Path and Received From domains did not match the claimed sender.
+
+IP address traced back to a non-Netflix server.
+
+SPF/DKIM authentication failed or was absent.
+
+🔍 Red Flag: Inconsistencies between sender and return-path; authentication missing.
+
+
+## 4. Suspicious Links or Attachments
 Link in the email: http://netflix-security-check.com/verify
 
 Hovering revealed a mismatched and unofficial domain.
@@ -68,14 +68,14 @@ No attachments were present, but the link directed to a fake login page.
 
 🔍 Red Flag: Deceptive link leading to a phishing site.
 
-5. Urgent or Threatening Language
+## 5. Urgent or Threatening Language
 Example language used:
 
 “If you do not complete the verification within 24 hours, your account will be permanently locked.”
 
 🔍 Red Flag: Creates a false sense of urgency to provoke immediate action.
 
-6. Mismatched URLs
+## 6. Mismatched URLs
 The anchor text in the email said “Click here to verify your account.”
 
 Hovering over it revealed the URL: http://netflix-security-check.com/verify
@@ -86,7 +86,7 @@ Not consistent with Netflix’s official domain: netflix.com
 
 
 
-7. Spelling and Grammar Errors
+## 7. Spelling and Grammar Errors
 Minor grammar issues were noted, such as:
 
 “Thank you for being a valued member of Netflix.” (Awkward phrasing)
@@ -97,7 +97,7 @@ Minor grammar issues were noted, such as:
 
 
 
-8. Summary of Phishing Traits Identified
+## 8. Summary of Phishing Traits Identified
 <pre>
 | Trait                   | Detected  | Notes                                 |
 | ----------------------- | --------  | ------------------------------------- |
