@@ -22,3 +22,13 @@ Thank you for being a valued member of Netflix.
 Sincerely,
 Netflix Billing Department
 Netflix Inc.</pre>
+
+2. Examination of Sender's Email Address
+   
+Claimed Sender: Netflix Support support@netflix-billing.com
+
+The domain netflix-billing.com is not an official Netflix domain.
+
+This is a spoofed address meant to mimic legitimate communication.
+
+🔍 Red Flag: Domain looks official but is not registered to Netflix.
