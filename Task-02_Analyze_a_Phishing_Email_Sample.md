@@ -34,6 +34,7 @@ This is a spoofed address meant to mimic legitimate communication.
 
 
 ## 3. Email Header Analysis
+Using an online email header analyzer:
 <pre>Return-Path: <support@netflix-billing.com>
 Received: from mail.netflix-billing.com (192.0.2.12)
   by smtp.example.com with ESMTP id ZKXH8M1G7;
@@ -48,7 +49,6 @@ MIME-Version: 1.0
 Content-Type: multipart/alternative;
  boundary="----=_Part_192_3048238927.1709466132904"</pre>
 
-Using an online email header analyzer:
 
 Return-Path and Received From domains did not match the claimed sender.
 
@@ -56,7 +56,7 @@ IP address traced back to a non-Netflix server.
 
 SPF/DKIM authentication failed or was absent.
 
-🔍 Red Flag: Inconsistencies between sender and return-path; authentication missing.
+ Red Flag: Inconsistencies between sender and return-path; authentication missing.
 
 
 ## 4. Suspicious Links or Attachments
@@ -66,14 +66,14 @@ Hovering revealed a mismatched and unofficial domain.
 
 No attachments were present, but the link directed to a fake login page.
 
-🔍 Red Flag: Deceptive link leading to a phishing site.
+ Red Flag: Deceptive link leading to a phishing site.
 
 ## 5. Urgent or Threatening Language
 Example language used:
 
 “If you do not complete the verification within 24 hours, your account will be permanently locked.”
 
-🔍 Red Flag: Creates a false sense of urgency to provoke immediate action.
+ Red Flag: Creates a false sense of urgency to provoke immediate action.
 
 ## 6. Mismatched URLs
 The anchor text in the email said “Click here to verify your account.”
@@ -82,7 +82,7 @@ Hovering over it revealed the URL: http://netflix-security-check.com/verify
 
 Not consistent with Netflix’s official domain: netflix.com
 
-🔍 Red Flag: Mismatch between displayed and actual URL.
+ Red Flag: Mismatch between displayed and actual URL.
 
 
 
@@ -93,7 +93,7 @@ Minor grammar issues were noted, such as:
 
 “Sincerely, Netflix Billing Department” (Netflix does not typically use this closing.)
 
-🔍 Red Flag: Subtle errors indicating unprofessional crafting.
+ Red Flag: Subtle errors indicating unprofessional crafting.
 
 
 
