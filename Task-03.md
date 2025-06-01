@@ -193,6 +193,8 @@ The task will change status to Running
 | Total Ports Open         | 7         |
 
 </pre>
+![Scan Results](./Screenshot_1-6-2025_171138_chatgpt.com.jpeg)
+
 
 ## Top Critical/High Vulnerabilities
 
