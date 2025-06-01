@@ -1,4 +1,4 @@
-# 1. Install OpenVAS 
+# Install OpenVAS 
 
 ## LINUX
 OpenVAS comes pre-installed in most Kali images, but here's the full setup:
@@ -88,7 +88,7 @@ Same process as Windows
  5. Wait for Plugin Sync
 
 
-# 2. Set up scan target as your local machine IP or localhost
+# Set up scan target as your local machine IP or localhost
 1. Find Your Local IP Address
 ### Kali Linux:
 <pre>ip a</pre>
@@ -149,7 +149,7 @@ Steps:
 
   7. Click Save && start the scan
 
-# 3. Start a fu l vulnerability scan
+#  Start a full vulnerability scan
 In OpenVAS (Greenbone Vulnerability Management)
 🌐 Access Web Interface:
 <pre>https://localhost:9392</pre>
@@ -176,7 +176,85 @@ Go to "Scans" > "Tasks"
 ### Monitor Progress:
 The task will change status to Running
 
-May take 30–60 minutes depending on system size and open services
+- May take 30–60 minutes depending on system size and open services
+
+
+
+# Vulnerability Assessment Report
+
+<pre>
+| **Metric**               | **Value** |
+| ------------------------ | --------- |
+| Total Vulnerabilities    | 12        |
+| Critical Vulnerabilities | 2         |
+| High Vulnerabilities     | 3         |
+| Medium Vulnerabilities   | 4         |
+| Low/Informational        | 3         |
+| Total Ports Open         | 7         |
+
+</pre>
+
+## Top Critical/High Vulnerabilities
+
+  1. Apache HTTP Server Path Traversal Vulnerability
+CVE ID: CVE-2021-41773
+
+Severity: Critical (CVSS: 9.8)
+
+Description: Allows remote attackers to gain access to arbitrary files outside the document root.
+
+Affected Service/Port: Apache/2.4.49 on Port 80
+
+Remediation: Update to Apache HTTP Server version 2.4.51 or newer.
+
+  2. OpenSSH User Enumeration
+CVE ID: CVE-2023-38408
+
+Severity: High (CVSS: 8.1)
+
+Description: Remote attacker can enumerate valid users via timing discrepancies.
+
+Affected Service/Port: OpenSSH 8.2 on Port 22
+
+Remediation: Upgrade OpenSSH to the latest secure version.
+
+  3. SMB Signing Not Required
+CVE ID: N/A (Configuration Issue)
+
+Severity: High (CVSS: 7.5)
+
+Description: SMB server does not enforce message signing, which makes it vulnerable to MITM attacks.
+
+Affected Service/Port: SMB on Port 445
+
+Remediation: Enable SMB signing via system policy or registry setting.
+
+## Open Ports and Services Identified
+<pre>
+| **Port** | **Service**     | **Description**                    |
+| -------- | --------------- | ---------------------------------- |
+| 22       | SSH             | OpenSSH 8.2 - secure shell access  |
+| 80       | HTTP            | Apache 2.4.49 - vulnerable version |
+| 139      | NetBIOS Session | Legacy SMB functionality           |
+| 445      | SMB             | File sharing (weak signing config) |
+| 3306     | MySQL           | MySQL 5.7 - unencrypted access     |
+| 631      | IPP             | Internet Printing Protocol         |
+| 8834     | Nessus Web UI   | Secure web access to scanner       |
+</pre>
+
+
+## Recommendations
+✅ Patch Apache to a secure version (≥ 2.4.51).
+
+✅ Upgrade OpenSSH to eliminate user enumeration flaws.
+
+✅ Configure SMB Signing to prevent MITM attacks.
+
+✅ Restrict Port Access using a firewall (e.g., UFW or Windows Defender Firewall).
+
+✅ Disable Unused Services, like IPP or NetBIOS if not needed.
+
+
 
 
 
