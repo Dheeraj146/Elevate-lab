@@ -185,11 +185,11 @@ The task will change status to Running
 <pre>
 | **Metric**               | **Value** |
 | ------------------------ | --------- |
-| Total Vulnerabilities    | 12        |
+| Total Vulnerabilities    | 20        |
 | Critical Vulnerabilities | 2         |
-| High Vulnerabilities     | 3         |
-| Medium Vulnerabilities   | 4         |
-| Low/Informational        | 3         |
+| High Vulnerabilities     | 5         |
+| Medium Vulnerabilities   | 12         |
+| Low/Informational        | 1         |
 | Total Ports Open         | 7         |
 
 </pre>
