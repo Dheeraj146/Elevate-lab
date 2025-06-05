@@ -11,7 +11,7 @@ Evaluate multiple passwords of varying complexity using online password strength
 <pre>
 | Password            | Complexity Features                     | PasswordMeter Score | Feedback                                |
 | ------------------- | --------------------------------------- | ------------------- | --------------------------------------- |
-| `password123`       | lowercase + digits                      | 26% (Weak)          | Too short, common word, no symbols      |
+| `password123`       | lowercase + digits                      | 43% (Weak)          | Too short, common word, no symbols      |
 | `P@ssw0rd!`         | Uppercase + lowercase + digits + symbol | 70% (Moderate)      | Better structure, but still predictable |
 | `3x!T@9pL#v$Kz`     | Mixed case + symbols + digits           | 100% (Strong)       | Excellent length and complexity         |
 | `MyCatIsFluffy2025` | Phrase + digits                         | 55% (Moderate)      | Good length but lacks symbol complexity |
