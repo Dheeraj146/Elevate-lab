@@ -18,6 +18,9 @@ Evaluate multiple passwords of varying complexity using online password strength
 | `!Qaz2WSx#Edc4RFv`  | Random + structured                     | 100% (Strong)       | High entropy, secure                    |
 </pre>
 
+![Sample](./Screenshot 2025-06-05 222812.png)
+![image](https://github.com/user-attachments/assets/e0ca522b-3fda-4082-b187-0f1ca32749f7)
+
 # Observations
  - Short and simple passwords (e.g., password123) are highly insecure and easily cracked.
  - Common substitutions like @ for a (in P@ssw0rd) help a bit, but pattern-based passwords remain vulnerable.
