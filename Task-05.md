@@ -75,5 +75,39 @@ sudo apt install wireshark
    - TCP 3-way handshake observed: SYN, SYN-ACK, ACK
    - Port 80 (HTTP), Port 443 (HTTPS)
 
+## Useful Wireshark Display Filters
+<pre>
+| **Filter**                                 | **Description**                                            |                                            
+| ------------------------------------------ | ---------------------------------------------------------- | 
+| `ip.addr == 10.0.0.1`                      | Show all traffic with 10.0.0.1 as source or destination    |                                            
+| `ip.addr == 10.0.0.0/24`                   | Show all traffic to/from any address in 10.0.0.0/24 subnet |                                            
+| `ip.src == 10.0.0.1 && ip.dst == 10.0.0.2` | Traffic from 10.0.0.1 to 10.0.0.2                          |                                            
+| `!(ip.addr == 10.0.0.1)`                   | Exclude all traffic to/from 10.0.0.1                       |                                            
+| `icmp.type == 3`                           | ICMP “destination unreachable” packets                     |                                            
+| `tcp or udp`                               | Show all TCP or UDP traffic                                |                                            
+| `tcp.port == 80`                           | Show HTTP traffic (port 80)                                |                                            
+| `tcp.srcport < 1000`                       | TCP traffic from ports < 1000                              |                                            
+| `!(tcp or udp)`                            | Show non-TCP/UDP traffic                                   |                                            
+| `http or dns`                              | Show HTTP or DNS traffic                                   |                                            
+| `tcp.flags.syn == 1`                       | TCP packets with SYN flag                                  |                                            
+| `tcp.flags == 0x012`                       | TCP packets with SYN and ACK flags                         |                                            
+| `tcp.analysis.retransmission`              | Show retransmitted TCP packets                             |                                            
+| `http.request.method == "GET"`             | Show HTTP GET requests                                     |                                            
+| `http.response.code == 404`                | Show HTTP 404 errors                                       |                                            
+| `http.host == "www.test.com"`              | HTTP traffic to specified host                             |                                            
+| `tls.handshake`                            | Show only TLS handshake traffic                            |                                            
+| `tls.handshake.type == 1`                  | TLS Client Hello packets only                              |                                            
+| `dhcp and ip.addr == 10.0.0.0/24`          | DHCP traffic in 10.0.0.0/24                                |                                            
+| `dhcp.hw.mac_addr == 00:11:22:33:44:55`    | DHCP for specific MAC address                              |                                            
+| `dns.qry.name contains "cnn.com"`          | DNS queries for cnn.com                                    |                                            
+| `dns.resp.name contains "cnn.com"`         | DNS responses with cnn.com                                 |                                            
+| `frame contains "keyword"`                 | Packets that contain a specific string                     |                                            
+| `frame.len > 1000`                         | Packets larger than 1000 bytes                             |                                            
+| `eth.addr == 00:11:22:33:44:55`            | Traffic from/to specific MAC address                       |                                            
+| `eth[0x47:2] == 01:80`                     | Match Ethernet frames by bytes at offset                   |                                            
+| `!(arp or icmp or stp)`                    | Filter out ARP, ICMP, STP (background) traffic             |                                            
+| `vlan.id == 100`                           | Packets with VLAN ID 100                                   |                                            
+
+</pre>
 
   
