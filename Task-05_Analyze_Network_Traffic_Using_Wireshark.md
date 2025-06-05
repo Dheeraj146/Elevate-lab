@@ -3,8 +3,8 @@
 - Capture live network traffic using Wireshark, identify at least three network protocols, and analyze the types of communication captured.
 
 ## Tools Used
-- Wireshark v4.x
-- Operating System: Windows 10 / Linux (Ubuntu) / macOS (any supported version)
+- Wireshark v4.4.7
+- Operating System: Windows 10 / Linux (Ubuntu) 
 - Active network connection (Wi-Fi or Ethernet)
 
 ##  Installing Wireshark
