@@ -18,7 +18,8 @@ Evaluate multiple passwords of varying complexity using online password strength
 | `!Qaz2WSx#Edc4RFv`  | Random + structured                     | 100% (Strong)       | High entropy, secure                    |
 </pre>
 
-![Sample](./Screenshot 2025-06-05 222812.png)
+![image](https://github.com/user-attachments/assets/beba636f-36f4-437a-bd80-e07f98b424a5)
+
 ![image](https://github.com/user-attachments/assets/e0ca522b-3fda-4082-b187-0f1ca32749f7)
 
 # Observations
