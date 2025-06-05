@@ -47,6 +47,7 @@ sudo apt install wireshark
  2. Stop Capture:
  - Waited approximately 60 seconds.
  - Clicked Stop to end capture.
+   - [pcap file](w.pcapng)
  3. Filter Packets:
  - Used display filters:
   - http – to inspect HTTP traffic.
@@ -74,5 +75,5 @@ sudo apt install wireshark
    - TCP 3-way handshake observed: SYN, SYN-ACK, ACK
    - Port 80 (HTTP), Port 443 (HTTPS)
 
-## [pcap file]()
+
   
