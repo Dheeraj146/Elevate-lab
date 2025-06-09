@@ -62,7 +62,7 @@ Setup Steps Taken:
 
 IP Address Verification:
 
-- Before VPN: 47.247.94.xx (Location: Vaghodia, India)
+- Before VPN: 47.247.94.68 (Location: Vaghodia, India)
 
 - After VPN: 31.13.189.162 (Location: New york, United States)
 
