@@ -62,7 +62,7 @@ Step-by-Step Process:
 | ----------------- | ---------------------------------------- | ------------ |
 | ExampleExtensionX | Unknown developer, excessive permissions | Removed      |
 | ExampleToolbarPro | Never used, low user rating, outdated    | Removed      |
-| (If none found)   | No suspicious extensions found           | N/A          |
+
 
   </pre>
   
