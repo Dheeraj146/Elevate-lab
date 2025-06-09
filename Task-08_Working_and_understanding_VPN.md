@@ -62,9 +62,9 @@ Setup Steps Taken:
 
 IP Address Verification:
 
-- Before VPN: 198.51.100.23 (Location: My City, My Country)
+- Before VPN: 47.247.94.68 (Location: Vaghodia, India)
 
-- After VPN: 185.159.157.3 (Location: Netherlands)
+- After VPN: 31.13.189.162 (Location: New york, United States)
 
 - IP successfully changed.
 
@@ -82,9 +82,11 @@ Speed Observation:
 
 Screenshot: 
 ## Without VPN
-![image](https://github.com/user-attachments/assets/29a5f51d-7af6-49a1-abd4-710e996e417a)
+![image](https://github.com/user-attachments/assets/9d202040-bfe8-41ac-b043-322b418485bd)
+
 ## With VPN
-![image](https://github.com/user-attachments/assets/b581e9b4-48a3-42c1-9c1d-02e68c2faab5)
+![image](https://github.com/user-attachments/assets/389c3598-2ed6-4b41-9574-6ca1bba56945)
+
 
 
 Screenshot of changed IP address from https://whatismyipaddress.com.
